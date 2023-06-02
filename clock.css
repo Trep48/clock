@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+.container{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(68, 81, 110);
+    justify-content: space-evenly;
+    align-items: center;
+}
+.clock{
+    min-width: 200px;
+    --htwt:12.5rem;
+    width: var(--htwt);
+    height: var(--htwt);
+    background-color: rgb(39, 35, 171);
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px double rgb(255, 255, 255);
+    /* scale: 2.5; */
+    box-shadow: 0px 0px 19px rgb(32, 32, 32);
+    margin: 4px;
+}
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--disp)));
+    inset: .3rem;
+    text-align: center;
+}
+span div{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 1.2rem;
+    transform: rotate(calc(-30deg * var(--disp)));
+}
+.pivot{
+    --pivht:7px;
+    height: var(--pivht);
+    width: var(--pivht);
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    border-radius: 10px;
+    z-index: -1;
+}
+#sechand i{
+    position: absolute;
+    display: flex;
+    height: 70px;
+    width: 1px;
+    background-color: rgb(255, 0, 0);
+    transform: translateY(10px);
+}
+#minhand i{
+    position: absolute;
+    display: flex;
+    width: 3px;
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+}
+#hrshand i{
+    position: absolute;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+    width: 5px;
+}
+
+.digital{
+    background-color: rgb(0, 0, 0);
+    width: 200px;
+    height: 40px;
+    display: flex;
+    padding: 1px;
+}
+.digital div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 0.5px solid black;
+    margin: 1px;
+    flex-grow: 1;
+    background-color: aqua;
+}
+.sk{
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    transform: skew(10deg);
+}
+.pq{
+    transform: rotate(50deg);
+}
+.hp{
+    transform: scaleY(7);
+}
